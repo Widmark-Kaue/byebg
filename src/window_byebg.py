@@ -40,10 +40,11 @@ class Tela:
                 try:
                     outputpath = img_path.with_name(f'{img_path.stem}_byebg.png')
                     self.byebg(img, outputpath=outputpath.as_posix())
-                except:
-                    mb.showerror(message='Erro na remoção do fundo!')
-            
-            mb.showinfo(message='Execução completa!')
+                except Exception as e:
+                    var = f'Erro do tipo: {type(e)}\nArgumentos: {e.args}\n{e}'
+                    mb.showerror(message=var)
+
+            mb.showinfo(message='Execução completa!')      
         else:
             mb.showwarning(message='Não há imagens carregadas!')                    
         
