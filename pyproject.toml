@@ -10,6 +10,7 @@ python = ">=3.8,<3.12"
 rembg = "^2.0.50"
 Pillow = "^10.0.0"
 pathlib2 = "^2.3.7.post1"
+cx-freeze = "^6.15.12"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^5.13.2"

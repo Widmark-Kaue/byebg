@@ -39,8 +39,15 @@ _Remova o fundo de suas imagens JPG automagicamente._
    ```
 
 4. Compile o projeto (opcional):
+
+   Com o pyinstaller 
    ```bash
    pyinstaller --onefile --noconsole --icon=byebg.ico ./src/byebg.py
+   ```
+
+   Com o cx-Freeze
+   ```bash
+   cxfreeze -c .\src\window_byebg.py --icon=byebg.ico --base-name=Win32GUI --target-dir dist
    ```
    Pode ser que você precise ajustar o caminho correto do ícone se quiser incorporá-lo no executável.
 
